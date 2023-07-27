@@ -25,14 +25,11 @@ for j in range(T):
         elif S[i] == '&':
             while True:
                 MS[1] -= J[0]
-                if MS[1] < 1 or J[1] < 1:
-                    if J[1] < 0:
-                        fb = False
+                if MS[1] < 1: # 몬스터의 체력이 0이하
                     break
                 J[1] -= MS[0]
-                if MS[1] < 1 or J[1] < 1:
-                    if J[1] < 0:
-                        fb = False
+                if J[1] < 1:
+                    fb = False
                     break
         if not fb:
             break
@@ -53,14 +50,11 @@ for j in range(T):
             elif S[i] == '&':
                 while True:
                     MS[1] -= J[0]
-                    if MS[1] < 1 or J[1] < 1:
-                        if J[1] < 1:
-                            fb = False
+                    if MS[1] < 1: # 몬스터의 체력이 0이하
                         break
                     J[1] -= MS[0]
-                    if MS[1] < 1 or J[1] < 1:
-                        if J[1] < 1:
-                            fb = False
+                    if J[1] < 1:
+                        fb = False
                         break
             if not fb:
                 break
